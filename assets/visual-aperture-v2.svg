@@ -1,0 +1,29 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD9A0" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FF7A2E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g fill="none" stroke="#FF8A3D" stroke-width="2.5" opacity="0.85" filter="url(#glow)">
+    <polygon points="400.0,120.0 618.9,225.4 673.0,462.3 521.5,652.3 278.5,652.3 127.0,462.3 181.1,225.4" />
+    <polygon points="482.4,228.8 585.2,357.7 548.5,518.5 400.0,590.0 251.5,518.5 214.8,357.7 317.6,228.8" stroke="#FFB066" stroke-width="1.6" opacity="0.7"/>
+    <polygon points="400.0,305.0 474.3,340.8 492.6,421.1 441.2,485.6 358.8,485.6 307.4,421.1 325.7,340.8" stroke="#FFD9A0" stroke-width="1.6" opacity="0.9"/>
+    <line x1="400.0" y1="120.0" x2="441.2" y2="314.4" />
+    <line x1="618.9" y1="225.4" x2="492.6" y2="378.9" />
+    <line x1="673.0" y1="462.3" x2="474.3" y2="459.2" />
+    <line x1="521.5" y1="652.3" x2="400.0" y2="495.0" />
+    <line x1="278.5" y1="652.3" x2="325.7" y2="459.2" />
+    <line x1="127.0" y1="462.3" x2="307.4" y2="378.9" />
+    <line x1="181.1" y1="225.4" x2="358.8" y2="314.4" />
+    
+  </g>
+  <circle cx="400" cy="400" r="140" fill="url(#core)" />
+</svg>
