@@ -1020,11 +1020,21 @@
     .nav-logo img { height: 52px; }
     .nav-links { display: none; }
     .menu-toggle { display: flex; }
-    #hero { padding: 0 20px 40px; min-height: 100vh; height: auto; }
+    #hero { padding: 0; min-height: auto; height: auto; flex-direction: column; align-items: stretch; gap: 0; }
+    .hero-content { padding: 32px 20px 40px; max-width: 100%; }
     .hero-title { font-size: clamp(2rem, 10vw, 3.5rem) !important; margin-bottom: 20px; }
     .hero-sub { font-size: 0.9rem; }
     .hero-cta { font-size: clamp(0.9rem, min(1.2vw, 1.3rem), 1.3rem); padding: 14px 24px; }
-    .hero-reel { display: none; }
+    .hero-reel {
+      display: block;
+      position: relative;
+      left: auto; right: auto; top: auto; bottom: auto; transform: none;
+      width: 100%;
+      height: 62vh;
+      max-height: none;
+      order: -1;
+    }
+    .hero-reel::before { display: none; }
     .marquee-wrap { padding: 12px 0; }
     .marquee-item { font-size: clamp(1rem, min(1.5vw, 1.6rem), 1.6rem); gap: 32px; }
     section { padding: 60px 20px !important; width: 100%; overflow-x: hidden; }
@@ -1389,7 +1399,15 @@ p { text-wrap: pretty; hyphens: none; }
   .carousel-arrow { width: 40px !important; height: 40px !important; font-size: 20px !important; }
   #experience { padding: 60px 30px !important; }
   .contact-grid { grid-template-columns: 1fr !important; }
-  .hero-reel { display: none !important; }
+  .hero-reel {
+    display: block !important;
+    position: relative !important;
+    left: auto !important; right: auto !important; top: auto !important; bottom: auto !important; transform: none !important;
+    width: 100% !important;
+    height: 62vh !important;
+    max-height: none !important;
+    order: -1 !important;
+  }
 }
 </style>
 <script type="application/ld+json">
